@@ -20,14 +20,15 @@ footer{margin-top:3em;color:#777;font-size:.9em;border-top:1px solid #ddd;paddin
 
 <p>Compound Mode Social is a personal social media management dashboard for the
 Compound Mode content brand. It connects read-only to the brand's YouTube channel
-to display channel statistics, published videos, and audience analytics in one place.</p>
+and TikTok account to display channel statistics, published videos, and audience
+analytics in one place.</p>
 
 <h2>What it does</h2>
 <div class="card">
 <ul>
-<li><strong>Channel overview</strong> — view subscriber count, total views, and video inventory.</li>
+<li><strong>Channel overview</strong> — view subscriber and follower counts, total views, and video inventory.</li>
 <li><strong>Video listing</strong> — browse published videos with titles and publication dates.</li>
-<li><strong>Analytics summary</strong> — see views, watch time, and engagement trends from YouTube Analytics.</li>
+<li><strong>Analytics summary</strong> — see views, watch time, and engagement trends.</li>
 </ul>
 </div>
 
@@ -38,9 +39,19 @@ It requests <strong>read-only</strong> permissions:</p>
 <li><code>youtube.readonly</code> — view channel information and video listings.</li>
 <li><code>yt-analytics.readonly</code> — view YouTube Analytics reports.</li>
 </ul>
-<p>It <strong>never</strong> uploads videos, posts comments, modifies content, or
-deletes anything. All data stays on your local machine; access tokens are stored
-in your operating system's secure credential store.</p>
+
+<h2>How it connects to TikTok</h2>
+<p>The dashboard uses TikTok Login Kit OAuth 2.0 to connect to your own TikTok account.
+It requests <strong>read-only</strong> permissions:</p>
+<ul>
+<li><code>user.info.basic</code> — view account identifiers, display name, and avatar.</li>
+<li><code>user.info.stats</code> — view follower, following, like, and video counts.</li>
+<li><code>video.list</code> — view published videos and available metrics.</li>
+</ul>
+
+<p>It <strong>never</strong> uploads videos, publishes content, posts comments, modifies
+content, or deletes anything on any platform. All data stays on your local machine;
+access tokens are stored in your operating system's secure credential store.</p>
 
 <h2>Links</h2>
 <ul>
@@ -50,7 +61,7 @@ in your operating system's secure credential store.</p>
 
 <footer>
 <p>Compound Mode Social is a personal tool operated by its owner for managing the
-Compound Mode YouTube channel. Contact: see Privacy Policy.</p>
+Compound Mode YouTube channel and TikTok account. Contact: see Privacy Policy.</p>
 </footer>
 </body>
 </html>
